@@ -30,12 +30,13 @@ class CashFlowModel(BaseModel[CashFlowResult]):
     def create_instance(self, data : dict) -> pyo.ConcreteModel:
         """
         data =
-
+        {
             "Anna": -90, "Carla": -75, ...,
             "Bruno": 82, "Dario": 63, ...
 
         }
         Sum of the balances must be zero. Positive balance means that the person should pay that amount, negative balance means that the person should receive that amount.
+        Raises: ValueError if the sum of the balances is not zero.
         """
         _check_balances(data)
         portal = pyo.DataPortal()
