@@ -18,6 +18,9 @@ class SolverResult:
     objective : float | None
     instance : pyo.ConcreteModel | None # solved instance model, ready for post processing
 
+    @property
+    def is_optimal(self) -> bool:
+        return self.status == ResultStatus.OPTIMAL
 
 
 def extract_solver_status(result) -> ResultStatus:
@@ -33,7 +36,7 @@ def extract_solver_status(result) -> ResultStatus:
     return ResultStatus.ERROR
 
 class Solver:
-    def __init__(self, solver_name : str = 'gurobi', solver_options : dict = None):
+    def __init__(self, solver_name : str = 'highs', solver_options : dict = None):
         self._solver = pyo.SolverFactory(solver_name)
         if solver_options:
             for option, value in solver_options.items():
