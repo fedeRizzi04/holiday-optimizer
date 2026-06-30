@@ -1,6 +1,6 @@
 import streamlit as st
 
-from problems import PROBLEMS
+from holiday_optimizer.problems import PROBLEMS
 
 
 def render_home() -> None:

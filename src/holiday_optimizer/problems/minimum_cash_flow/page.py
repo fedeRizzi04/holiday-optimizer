@@ -1,10 +1,10 @@
 import pandas as pd
 import streamlit as st
 
-from models.minimum_cash_flow.cash_flow import CashFlowModel, CashFlowResult
-from models.minimum_cash_flow.model import min_max_transactions, min_transactions
-from models.solver import Solver
-from problems.base_problem import BaseProblemPage, ProblemMeta
+from holiday_optimizer.models.minimum_cash_flow.cash_flow import CashFlowModel, CashFlowResult
+from holiday_optimizer.models.minimum_cash_flow.model import min_max_transactions, min_transactions
+from holiday_optimizer.models.solver import Solver
+from holiday_optimizer.problems.base_problem import BaseProblemPage, ProblemMeta
 
 _OBJECTIVES = {
     "Minimize total transactions": min_transactions,

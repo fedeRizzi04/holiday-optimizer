@@ -1,7 +1,7 @@
 import streamlit as st
 
-from pages.home import render_home
-from problems import PROBLEMS
+from holiday_optimizer.pages.home import render_home
+from holiday_optimizer.problems import PROBLEMS
 
 st.set_page_config(
     page_title="Holiday Optimizer",

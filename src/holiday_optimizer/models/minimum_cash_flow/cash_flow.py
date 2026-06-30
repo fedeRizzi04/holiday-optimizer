@@ -2,9 +2,9 @@ from dataclasses import dataclass
 import pandas as pd
 import pyomo.environ as pyo
 from pyomo.core import floor
-from models.base_model import BaseModel
+from holiday_optimizer.models.base_model import BaseModel
 from typing import override
-from models.minimum_cash_flow.model import get_cash_flow_model, ObjectiveBuilder
+from holiday_optimizer.models.minimum_cash_flow.model import get_cash_flow_model, ObjectiveBuilder
 
 
 @dataclass
